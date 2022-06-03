@@ -6,11 +6,11 @@ def add_arg(argv):
         return
     else:
         i = 1
-        addd = 0
+        add = 0
         while i <= n:
-            addd += int(argv[i])
+            add += int(argv[i])
             i += 1
-        print("{:d}".format(addd))
+        print("{:d}".format(add))
 
 if __name__ == "__main__":
     import sys
