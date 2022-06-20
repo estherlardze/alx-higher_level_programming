@@ -1,4 +1,13 @@
 #!/usr/bin/python3
 def magic_calculation(a, b):
     num = 0
-    return result
+    for i in range(1, 3):
+        try:
+            if i > a:
+                raise Exception("Too far")
+            else:
+                num += (a ** b) / i
+        except:
+            num = b + a
+            break
+    return 
