@@ -3,6 +3,7 @@
 Module say_my_name
 Prints a given first name and last name.
 """
+
 def say_my_name(first_name, last_name=""):
     """Print a name.
     Args:
