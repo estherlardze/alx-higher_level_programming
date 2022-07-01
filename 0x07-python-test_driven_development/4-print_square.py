@@ -1,22 +1,20 @@
 #!/usr/bin/python3
-"""
-Module say_my_name
-Prints a given first name and last name.
-"""
+"""Defines a square-printing function."""
 
-def say_my_name(first_name, last_name=""):
-    """Print a name.
+
+def print_square(size):
+    """Print a square with the # character.
     Args:
-        first_name (str): The first name to print.
-        last_name (str): The last name to print.
+        size (int): The height/width of the square.
     Raises:
-        TypeError: If either of first_name or last_name are not strings.
+        TypeError: If size is not an integer.
+        ValueError: If size is < 0
     """
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
 
-    if type(first_name) is not str:
-        raise TypeError("first_name must be a string")
-
-    if type(last_name) is not str:
-        raise TypeError("last_name must be a string")
-
-    print("My name is {} {}".format(first_name, last_name))
+    for i in range(size):
+        [print("#", end="") for j in range(size)]
+        print("")
