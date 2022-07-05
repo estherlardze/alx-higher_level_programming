@@ -1,8 +1,8 @@
+
 #!/usr/bin/python3
 # 7-base_geometry.py
 """Defines class BaseGeometry.
 """
-
 
 class BaseGeometry:
     """Rep base geometry.
