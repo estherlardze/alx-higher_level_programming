@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-""" 3-to_json_string: def to_json_string """
+""" Module: 3-to_json_string """
+
 import json
+
 
 def to_json_string(my_obj):
     """
-        returns JSON representation of an object
+        Return json representation of an object
         Args:
-            my_obj: object to be converted to JSON
+            obj- object to convert to json
     """
+
     return json.dumps(my_obj)
