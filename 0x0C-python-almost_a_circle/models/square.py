@@ -75,7 +75,7 @@ class Square(Rectangle):
         """returns the dictionary representation of square"""
         dic = {}
         dic["id"] = self.id
-        dic["size"] = self.size
+        dic["size"] = self.Size
         dic["x"] = self.x
         dic["y"] = self.y
         return dic
