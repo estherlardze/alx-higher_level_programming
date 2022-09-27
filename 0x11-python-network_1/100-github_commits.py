@@ -1,20 +1,17 @@
 #!/usr/bin/python3
-'''
-gets 10 latest commits of a github repo
-usage: ./100-github_commits.py <repo name> <owner>
-'''
-from sys import argv
-import requests
+"""Takes in Github repo and owner name to list
+10 commits (from the most recent to oldest)"""
 
-if __name__ == '__main__':
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(
-        argv[1], argv[2])
-    res = requests.get(url)
-    output = res.json()
-    try:
-        for i in range(10):
-            print('{}: {}'.format(
-                output[i].get('sha'),
-                output[i].get('commit').get('author').get('name')))
-    except IndexError:
-        pass
+
+if __name__ == "__main__":
+    import requests
+    import sys
+
+    r = requests.get('https://api.github.com/repos/{}/{}/commits'
+                     .format(sys.argv[2], sys.argv[1]))
+    if r.status_code >= 400:
+        print('None')
+    else:
+        for com in r.json()[:10]:
+            print("{}: {}".format(com.get('sha'),
+                                  com.get('commit').get('author').get('name')))
