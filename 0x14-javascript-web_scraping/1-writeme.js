@@ -12,4 +12,3 @@ fs.writeFile(filepath, toWrite, err => {
     console.log(err);
   }
 });
-
